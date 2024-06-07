@@ -24,8 +24,8 @@ var diabloSpawnPosition = data.Position{
 }
 
 var chaosSanctuaryEntrancePosition = data.Position{
-	X: 7790,
-	Y: 5544,
+	X: 7780, //TDL: org 7790
+	Y: 5534, //TDL: org 5544
 }
 
 var entranceToStar = []data.Position{
@@ -130,7 +130,7 @@ func (a Diablo) BuildActions() (actions []action.Action) {
 		actions = append(actions, a.builder.MoveTo(func(d game.Data) (data.Position, bool) {
 			a.logger.Debug("Moving to next seal", slog.Int("seal", sealNumber+1))
 			if obj, found := d.Objects.FindOne(seal); found {
-				if d := pather.DistanceFromMe(d, obj.Position); d < 7 {
+				if d := pather.DistanceFromMe(d, obj.Position); d < 10 {      // TDL: changed from 7 to 10 so its fine to be a bit further away from the seal to clear it
 					a.logger.Debug("We are close enough to the seal", slog.Int("seal", sealNumber+1))
 					return data.Position{}, false
 				}
@@ -145,13 +145,14 @@ func (a Diablo) BuildActions() (actions []action.Action) {
 		}, step.StopAtDistance(7)))
 
 		// Try to calculate based on a square boundary around the seal which corner is safer, then tele there
-		//actions = append(actions, action.NewStepChain(func(d game.Data) []step.Step {
-		//	if obj, found := d.Objects.FindOne(seal); found {
-		//		pos := a.getLessConcurredCornerAroundSeal(d, obj.Position)
-		//		return []step.Step{step.MoveTo(pos)}
-		//	}
-		//	return []step.Step{}
-		//}))
+		// TDL: This was commented out, I enabled it ... feels this helps in not getting stuck
+		actions = append(actions, action.NewStepChain(func(d game.Data) []step.Step {
+			if obj, found := d.Objects.FindOne(seal); found {
+				pos := a.getLessConcurredCornerAroundSeal(d, obj.Position)
+				return []step.Step{step.MoveTo(pos)}
+			}
+			return []step.Step{}
+		}))
 
 		// Kill all the monsters close to the seal and item pickup
 		//actions = append(actions,
