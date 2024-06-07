@@ -15,9 +15,9 @@ import (
 )
 
 const (
-	fohMaxAttacksLoop = 20
-	fohMinDistance    = 5
-	fohMaxDistance    = 20
+	fohMaxAttacksLoop = 75 // TDL: Upped massively to kill Baal with FoH - dirty fix lol
+	fohMinDistance    = 20 // TDL: Upped from 5 to 20, sometimes to far for Conviction so can do 15 too
+	fohMaxDistance    = 25 // TDL :Upped from 20 to 25,sometimes to far for Conviction so could also leave this at 20
 )
 
 type Foh struct {
