@@ -24,30 +24,30 @@ var diabloSpawnPosition = data.Position{
 }
 
 var chaosSanctuaryEntrancePosition = data.Position{
-	X: 7780, //TDL: org 7790
-	Y: 5534, //TDL: org 5544
+	X: 7790,
+	Y: 5544,
 }
 
-var entranceToStar = []data.Position{
-	{X: 7791, Y: 5491},
-	{X: 7768, Y: 5459},
-	{X: 7775, Y: 5424},
-	{X: 7817, Y: 5458},
-	{X: 7777, Y: 5408},
-	{X: 7769, Y: 5379},
-	{X: 7777, Y: 5357},
-	{X: 7809, Y: 5359},
-	{X: 7805, Y: 5330},
-	{X: 7780, Y: 5317},
+var entranceToStar = []data.Position{ //offset Y by -5
+	{X: 7791, Y: 5486},
+	{X: 7768, Y: 5454},
+	{X: 7775, Y: 5420},
+	{X: 7817, Y: 5453},
+	{X: 7777, Y: 5403},
+	{X: 7769, Y: 5374},
+	{X: 7777, Y: 5352},
+	{X: 7809, Y: 5354},
+	{X: 7805, Y: 5325},
+	{X: 7780, Y: 5312},
 }
 
 var starToViz = []data.Position{
 	{X: 7760, Y: 5295},
 	{X: 7744, Y: 5295},
-	{X: 7710, Y: 5290},
+	{X: 7710, Y: 5290}, // changed X from 7710 to 7717 and Y from 5290 to 5300
 	{X: 7675, Y: 5290},
-	{X: 7665, Y: 5315},
-	{X: 7665, Y: 5275},
+	{X: 7675, Y: 5310}, // changed X from 7665 to 7675 and Y to 5310 from 5315
+	{X: 7665, Y: 5280}, // changed Y from 5275 to 5280
 }
 
 var starToSeis = []data.Position{
@@ -334,7 +334,8 @@ func (a Diablo) generateClearActions(positions []data.Position, filter data.Mons
 				multiplier := 1
 
 				if pather.IsWalkable(pos, d.AreaOrigin, d.CollisionGrid) {
-					return []action.Action{a.builder.MoveToCoords(pos)}
+					//return []action.Action{a.builder.MoveToCoords(pos)}
+					return []action.Action{a.builder.MoveToCoordsWithMinDistance(pos, 20)}
 				}
 
 				for _ = range 2 {
@@ -343,7 +344,8 @@ func (a Diablo) generateClearActions(positions []data.Position, filter data.Mons
 						newPos := data.Position{X: pos.X + (i * multiplier), Y: pos.Y + (i * multiplier)}
 
 						if pather.IsWalkable(newPos, d.AreaOrigin, d.CollisionGrid) {
-							return []action.Action{a.builder.MoveToCoords(newPos)}
+							//return []action.Action{a.builder.MoveToCoords(newPos)}
+							return []action.Action{a.builder.MoveToCoordsWithMinDistance(pos, 20)}
 						}
 
 					}
@@ -352,14 +354,15 @@ func (a Diablo) generateClearActions(positions []data.Position, filter data.Mons
 				}
 
 				// Let it fail then
-				return []action.Action{a.builder.MoveToCoords(pos)}
+				//return []action.Action{a.builder.MoveToCoords(pos)}
+				return []action.Action{a.builder.MoveToCoordsWithMinDistance(pos, 20)}
 			}),
 			// Skip storm casters for now completely while clearing non-seals
 			a.builder.ClearAreaAroundPlayer(35, func(m data.Monsters) []data.Monster {
 				var monsters []data.Monster
 
 				monsters = filter(m)
-				monsters = skipStormCasterFilter(monsters)
+			//	monsters = skipStormCasterFilter(monsters)
 
 				return monsters
 			}),
