@@ -75,9 +75,12 @@ func (s Baal) BuildActions() (actions []action.Action) {
 				}
 			}
 
-			return []action.Action{s.builder.ClearAreaAroundPlayer(50, data.MonsterAnyFilter())}
+			return []action.Action{
+					s.builder.ClearAreaAroundPlayer(50, data.MonsterAnyFilter()),
+					s.builder.MoveToCoords(safebaalThronePosition),
+					s.builder.Wait(time.Second*5),
+			}	
 		}
-
 		return nil
 	}, action.RepeatUntilNoSteps()))
 
