@@ -39,7 +39,7 @@ func (a Cows) BuildActions() []action.Action {
 			return d.PlayerUnit.Area == area.MooMooFarm
 		}),
 		a.builder.Buff(),
-		a.builder.ClearArea(true, data.MonsterAnyFilter()),
+		a.builder.ClearArea(false, data.MonsterAnyFilter()), // set to not open chests changed true into false
 	)
 }
 
