@@ -16,8 +16,8 @@ import (
 
 const (
 	maxAttacksLoop = 5
-	minDistance    = 2
-	maxDistance    = 6
+	minDistance    = 15
+	maxDistance    = 20
 )
 
 type Trapsin struct {
@@ -76,9 +76,9 @@ func (s Trapsin) KillMonsterSequence(
 
 		helper.Sleep(100)
 		steps = append(steps,
-			step.SecondaryAttack(skill.LightningSentry, id, 3, opts...),
-			step.SecondaryAttack(skill.DeathSentry, id, 2, opts...),
-			step.PrimaryAttack(id, 2, step.Distance(minDistance, maxDistance)),
+			step.SecondaryAttack(skill.LightningSentry, id, 4, opts...),
+			step.SecondaryAttack(skill.DeathSentry, id, 1, opts...),
+			step.PrimaryAttack(id, 3, step.Distance(minDistance, maxDistance)),
 		)
 
 		return
@@ -96,9 +96,9 @@ func (s Trapsin) killMonster(npc npc.ID, t data.MonsterType) action.Action {
 
 		helper.Sleep(100)
 		steps = append(steps,
-			step.SecondaryAttack(skill.LightningSentry, m.UnitID, 3, opts...),
-			step.SecondaryAttack(skill.DeathSentry, m.UnitID, 2, opts...),
-			step.PrimaryAttack(m.UnitID, 2, opts...),
+			step.SecondaryAttack(skill.LightningSentry, m.UnitID, 4, opts...),
+			step.SecondaryAttack(skill.DeathSentry, m.UnitID, 1, opts...),
+			step.PrimaryAttack(m.UnitID, 3, opts...),
 		)
 
 		return
@@ -196,9 +196,9 @@ func (s Trapsin) KillCouncil() action.Action {
 		for _, m := range councilMembers {
 			for range maxAttacksLoop {
 				steps = append(steps,
-					step.SecondaryAttack(skill.LightningSentry, m.UnitID, 3, nil),
-					step.SecondaryAttack(skill.DeathSentry, m.UnitID, 2, nil),
-					step.PrimaryAttack(m.UnitID, 2, step.Distance(minDistance, maxDistance)),
+					step.SecondaryAttack(skill.LightningSentry, m.UnitID, 4, nil),
+					step.SecondaryAttack(skill.DeathSentry, m.UnitID, 1, nil),
+					step.PrimaryAttack(m.UnitID, 3, step.Distance(minDistance, maxDistance)),
 				)
 			}
 		}
