@@ -110,24 +110,74 @@ func (s BlizzardSorceress) KillCountess() action.Action {
 	return s.killMonsterByName(npc.DarkStalker, data.MonsterTypeSuperUnique, sorceressMaxDistance, false, nil)
 }
 
+//func (s BlizzardSorceress) KillAndariel() action.Action {
+//	return s.killMonsterByName(npc.Andariel, data.MonsterTypeNone, sorceressMaxDistance, false, nil)
+//}
+
+// Add static to Andariel
+
 func (s BlizzardSorceress) KillAndariel() action.Action {
-	return s.killMonsterByName(npc.Andariel, data.MonsterTypeNone, sorceressMaxDistance, false, nil)
+	return action.NewChain(func(d game.Data) []action.Action {
+		return []action.Action{
+			action.NewStepChain(func(d game.Data) []step.Step {
+				m, _ := d.Monsters.FindOne(npc.Andariel, data.MonsterTypeNone)
+				return []step.Step{
+					step.SecondaryAttack(skill.StaticField, m.UnitID, 7, step.Distance(5, 8)),
+				}
+			}),
+			s.killMonsterByName(npc.Andariel, data.MonsterTypeNone, sorceressMaxDistance, false, nil),
+		}
+	})
 }
 
 func (s BlizzardSorceress) KillSummoner() action.Action {
 	return s.killMonsterByName(npc.Summoner, data.MonsterTypeNone, sorceressMaxDistance, false, nil)
 }
 
+//func (s BlizzardSorceress) KillDuriel() action.Action {
+//	return s.killMonsterByName(npc.Duriel, data.MonsterTypeNone, sorceressMaxDistance, true, nil)
+//}
+
+// Add static to Duriel
+
 func (s BlizzardSorceress) KillDuriel() action.Action {
-	return s.killMonsterByName(npc.Duriel, data.MonsterTypeNone, sorceressMaxDistance, true, nil)
+	return action.NewChain(func(d game.Data) []action.Action {
+		return []action.Action{
+			action.NewStepChain(func(d game.Data) []step.Step {
+				m, _ := d.Monsters.FindOne(npc.Duriel, data.MonsterTypeNone)
+				return []step.Step{
+					step.SecondaryAttack(skill.StaticField, m.UnitID, 7, step.Distance(5, 8)),
+				}
+			}),
+			s.killMonsterByName(npc.Duriel, data.MonsterTypeNone, sorceressMaxDistance, false, nil),
+		}
+	})
 }
 
 func (s BlizzardSorceress) KillPindle(skipOnImmunities []stat.Resist) action.Action {
 	return s.killMonsterByName(npc.DefiledWarrior, data.MonsterTypeSuperUnique, sorceressMaxDistance, false, skipOnImmunities)
 }
+
+//func (s BlizzardSorceress) KillMephisto() action.Action {
+//	return s.killMonsterByName(npc.Mephisto, data.MonsterTypeNone, sorceressMaxDistance, true, nil)
+//}
+
+// Add static to Mephisto
+
 func (s BlizzardSorceress) KillMephisto() action.Action {
-	return s.killMonsterByName(npc.Mephisto, data.MonsterTypeNone, sorceressMaxDistance, true, nil)
+	return action.NewChain(func(d game.Data) []action.Action {
+		return []action.Action{
+			action.NewStepChain(func(d game.Data) []step.Step {
+				m, _ := d.Monsters.FindOne(npc.Mephisto, data.MonsterTypeNone)
+				return []step.Step{
+					step.SecondaryAttack(skill.StaticField, m.UnitID, 7, step.Distance(5, 8)),
+				}
+			}),
+			s.killMonsterByName(npc.Mephisto, data.MonsterTypeNone, sorceressMaxDistance, false, nil),
+		}
+	})
 }
+
 
 func (s BlizzardSorceress) KillNihlathak() action.Action {
 	return s.killMonsterByName(npc.Nihlathak, data.MonsterTypeSuperUnique, sorceressMaxDistance, false, nil)
