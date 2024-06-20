@@ -19,6 +19,12 @@ var baalThronePosition = data.Position{
 	Y: 5042,
 }
 
+// Safe spot behind to dodge hydras
+var safebaalThronePosition = data.Position{
+	X: 15116,
+	Y: 5052,
+}
+
 type Baal struct {
 	baseRun
 }
