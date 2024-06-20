@@ -1,0 +1,119 @@
+/////////////////////////MAGIC JEWELS/////////////////////////
+[type] == jewel && [quality] == magic # [ias] >=15 && [fireresist] >=29
+[type] == jewel && [quality] == magic # [defense] >= 64 && ([ias] >= 15 || [maxdamage] >= 15 || [mindamage] >= 10 || [fhr] >= 7 || [ItemGoldBonus] >= 30 || [itemmagicbonus] >= 10 || [maxhp] >= 20 || [itemreqpercent] == -15 || [Dexterity] >= 9 || [strength] >= 9 || [energy] >= 9)								//Perfect Magic Jewel
+[type] == jewel && [quality] == magic # [defense] >= 50 && ([ias] >= 15 || [maxdamage] >= 15 || [mindamage] >= 10 || [fhr] >= 7 || [itemgoldbonus] >= 30 || [itemmagicbonus] >= 10 || [maxhp] >= 20 || [itemreqpercent] == -15 || [dexterity] >= 9 || [strength] >= 9 || [energy] >= 9)							//Good prefix / Perfect suffix Magic Jewel
+[type] == jewel && [quality] == magic # [defense] >= 64 && ([ias] >= 10 || [maxdamage] >= 10 || [mindamage] >= 5 || [itemgoldbonus] >= 20 || [itemmagicbonus] >= 7 || [maxhp] >= 15 || [dexterity] >= 6 || [strength] >= 6 || [energy] >= 6)													//Perfect prefix / Good suffix Magic Jewel
+[type] == jewel && [quality] == magic # [defense] >= 50 && ([ias] >= 10 || [maxdamage] >= 10 || [mindamage] >= 5 || [itemgoldbonus] >= 20 || [itemmagicbonus] >= 7 || [maxhp] >= 15 || [dexterity] >= 6 || [strength] >= 6 || [energy] >= 6)													//Good Magic Jewel
+																																		//Good prefix / Perfect suffix Magic Jewel
+[type] == jewel && [quality] == magic # [maxdamage] >= 15 && ([ias] >= 15 || [mindamage] >= 10 || [fhr] >= 7 || [itemgoldbonus] >= 30 || [itemmagicbonus] >= 10 || [maxhp] >= 20 || [itemreqpercent] == -15 || [dexterity] >= 9 || [strength] >= 9 || [energy] >= 9)										//Perfect Magic Jewel
+[type] == jewel && [quality] == magic # [maxdamage] >= 10 && ([ias] >= 15 || [mindamage] >= 10 || [fhr] >= 7 || [itemgoldbonus] >= 30 || [itemmagicbonus] >= 10 || [maxhp] >= 20 || [itemreqpercent] == -15 || [dexterity] >= 9 || [strength] >= 9 || [energy] >= 9)										//Good prefix / Perfect suffix Magic Jewel
+[type] == jewel && [quality] == magic # [maxdamage] >= 15 && ([ias] >= 10 || [mindamage] >= 5 || [itemgoldbonus] >= 20 || [itemmagicbonus] >= 7 || [maxhp] >= 15 || [dexterity] >= 6 || [strength] >= 6 || [energy] >= 6)															//Perfect prefix / Good suffix Magic Jewel
+[type] == jewel && [quality] == magic # [maxdamage] >= 10 && ([ias] >= 10 || [mindamage] >= 5 || [itemgoldbonus] >= 20 || [itemmagicbonus] >= 7 || [maxhp] >= 15 || [dexterity] >= 6 || [strength] >= 6 || [energy] >= 6)															//Good Magic Jewel
+
+[type] == jewel && [quality] == magic # [enhanceddamage] >= 40 && ([ias] >= 15 || [maxdamage] >= 15 || [mindamage] >= 10 || [fhr] >= 7 || [itemgoldbonus] >= 30 || [itemmagicbonus] >= 10 || [maxhp] >= 20 || [itemreqpercent] == -15 || [dexterity] >= 9 || [strength] >= 9 || [energy] >= 9)							//Perfect Magic Jewel
+[type] == jewel && [quality] == magic # [enhanceddamage] >= 30 && ([ias] >= 15 || [maxdamage] >= 15 || [mindamage] >= 10 || [fhr] >= 7 || [itemgoldbonus] >= 30 || [itemmagicbonus] >= 10 || [maxhp] >= 20 || [itemreqpercent] == -15 || [dexterity] >= 9 || [strength] >= 9 || [energy] >= 9)							//Good prefix / Perfect suffix Magic Jewel
+[type] == jewel && [quality] == magic # [enhanceddamage] >= 40 && ([ias] >= 10 || [maxdamage] >= 10 || [mindamage] >= 5 || [itemgoldbonus] >= 20 || [itemmagicbonus] >= 7 || [maxhp] >= 15 || [dexterity] >= 6 || [strength] >= 6 || [energy] >= 6)												//Perfect prefix / Good suffix Magic Jewel
+[type] == jewel && [quality] == magic # [enhanceddamage] >= 30 && ([ias] >= 10 || [maxdamage] >= 10 || [mindamage] >= 5 || [itemgoldbonus] >= 20 || [itemmagicbonus] >= 7 || [maxhp] >= 15 || [dexterity] >= 6 || [strength] >= 6 || [energy] >= 6)												//Good Magic Jewel
+
+[type] == jewel && [quality] == magic # [tohit] >= 100 && ([ias] >= 15 || [maxdamage] >= 15 || [mindamage] >= 10 || [fhr] >= 7 || [itemgoldbonus] >= 30 || [itemmagicbonus] >= 10 || [maxhp] >= 20 || [itemreqpercent] == -15 || [dexterity] >= 9 || [strength] >= 9 || [energy] >= 9)								//Perfect Magic Jewel
+[type] == jewel && [quality] == magic # [tohit] >= 80 && ([ias] >= 15 || [maxdamage] >= 15 || [mindamage] >= 10 || [fhr] >= 7 || [itemgoldbonus] >= 30 || [itemmagicbonus] >= 10 || [maxhp] >= 20 || [itemreqpercent] == -15 || [dexterity] >= 9 || [strength] >= 9 || [energy] >= 9)								//Good prefix / Perfect suffix Magic Jewel
+[type] == jewel && [quality] == magic # [tohit] >= 100 && ([ias] >= 10 || [maxdamage] >= 10 || [mindamage] >= 5 || [itemgoldbonus] >= 20 || [itemmagicbonus] >= 7 || [maxhp] >= 15 || [dexterity] >= 6 || [strength] >= 6 || [energy] >= 6)													//Perfect prefix / Good suffix Magic Jewel
+[type] == jewel && [quality] == magic # [tohit] >= 80 && ([ias] >= 10 || [maxdamage] >= 10 || [mindamage] >= 5 || [itemgoldbonus] >= 20 || [itemmagicbonus] >= 7 || [maxhp] >= 15 || [dexterity] >= 6 || [strength] >= 6 || [energy] >= 6)													//Good Magic Jewel
+
+[type] == jewel && [quality] == magic # [maxmana] >= 20 && ([ias] >= 15 || [maxdamage] >= 15 || [mindamage] >= 10 || [fhr] >= 7 || [itemgoldbonus] >= 30 || [itemmagicbonus] >= 10 || [maxhp] >= 20 || [itemreqpercent] == -15 || [dexterity] >= 9 || [strength] >= 9 || [energy] >= 9)								//Perfect Magic Jewel
+[type] == jewel && [quality] == magic # [maxmana] >= 15 && ([ias] >= 15 || [maxdamage] >= 15 || [mindamage] >= 10 || [fhr] >= 7 || [itemgoldbonus] >= 30 || [itemmagicbonus] >= 10 || [maxhp] >= 20 || [itemreqpercent] == -15 || [dexterity] >= 9 || [strength] >= 9 || [energy] >= 9)							//Good prefix / Perfect suffix Magic Jewel
+[type] == jewel && [quality] == magic # [maxmana] >= 20 && ([ias] >= 10 || [maxdamage] >= 10 || [mindamage] >= 5 || [itemgoldbonus] >= 20 || [itemmagicbonus] >= 7 || [maxhp] >= 15 || [dexterity] >= 6 || [strength] >= 6 || [energy] >= 6)													//Perfect prefix / Good suffix Magic Jewel
+
+[type] == jewel && [quality] == magic # (([fireresist]+[lightresist]+[coldresist]+[poisonresist] >= 60) && ([ias] >= 15 || [maxdamage] >= 15 || [mindamage] >= 10 || [fhr] >= 7 || [itemgoldbonus] >= 30 || [itemmagicbonus] >= 10 || [maxhp] >= 20 || [itemreqpercent] == -15 || [dexterity] >= 9 || [strength] >= 9 || [energy] >= 9))	//Perfect Magic Jewel	
+[type] == jewel && [quality] == magic # (([fireresist]+[lightresist]+[coldresist]+[poisonresist] >= 40) && ([ias] >= 15 || [maxdamage] >= 15 || [mindamage] >= 10 || [fhr] >= 7 || [itemgoldbonus] >= 30 || [itemmagicbonus] >= 10 || [maxhp] >= 20 || [itemreqpercent] == -15 || [dexterity] >= 9 || [strength] >= 9 || [energy] >= 9))	//Good prefix / Perfect suffix Magic Jewel
+[type] == jewel && [quality] == magic # (([fireresist]+[lightresist]+[coldresist]+[poisonresist] >= 60) && ([ias] >= 10 || [maxdamage] >= 10 || [mindamage] >= 5 || [itemgoldbonus] >= 20 || [itemmagicbonus] >= 7 || [maxhp] >= 15 || [dexterity] >= 6 || [strength] >= 6 || [energy] >= 6))							//Perfect prefix / Good suffix Magic Jewel
+[type] == jewel && [quality] == magic # (([fireresist]+[lightresist]+[coldresist]+[poisonresist] >= 40) && ([ias] >= 10 || [maxdamage] >= 10 || [mindamage] >= 5 || [itemgoldbonus] >= 20 || [itemmagicbonus] >= 7 || [maxhp] >= 15 || [dexterity] >= 6 || [strength] >= 6 || [energy] >= 6))							//Good Magic Jewel
+
+[type] == jewel && [quality] == magic # [fireresist] >= 30 && ([ias] >= 15 || [maxdamage] >= 15 || [mindamage] >= 10 || [fhr] >= 7 || [itemgoldbonus] >= 30 || [itemmagicbonus] >= 10 || [maxhp] >= 20 || [itemreqpercent] == -15 || [dexterity] >= 9 || [strength] >= 9 || [energy] >= 9)							//Perfect Magic Jewel
+[type] == jewel && [quality] == magic # [fireresist] >= 20 && ([ias] >= 15 || [maxdamage] >= 15 || [mindamage] >= 10 || [fhr] >= 7 || [itemgoldbonus] >= 30 || [itemmagicbonus] >= 10 || [maxhp] >= 20 || [itemreqpercent] == -15 || [dexterity] >= 9 || [strength] >= 9 || [energy] >= 9)							//Good prefix / Perfect suffix Magic Jewel
+[type] == jewel && [quality] == magic # [fireresist] >= 30 && ([ias] >= 10 || [maxdamage] >= 10 || [mindamage] >= 5 || [itemgoldbonus] >= 20 || [itemmagicbonus] >= 7 || [maxhp] >= 15 || [dexterity] >= 6 || [strength] >= 6 || [energy] >= 6)													//Perfect prefix / Good suffix Magic Jewel
+[type] == jewel && [quality] == magic # [fireresist] >= 25 && ([ias] >= 10 || [maxdamage] >= 10 || [mindamage] >= 5 || [itemgoldbonus] >= 20 || [itemmagicbonus] >= 7 || [maxhp] >= 15 || [dexterity] >= 6 || [strength] >= 6 || [energy] >= 6)													//Good Magic Jewel
+
+[type] == jewel && [quality] == magic # [lightresist] >= 30 && ([ias] >= 15 || [maxdamage] >= 15 || [mindamage] >= 10 || [fhr] >= 7 || [itemgoldbonus] >= 30 || [itemmagicbonus] >= 10 || [maxhp] >= 20 || [itemreqpercent] == -15 || [dexterity] >= 9 || [strength] >= 9 || [energy] >= 9)							//Perfect Magic Jewel
+[type] == jewel && [quality] == magic # [lightresist] >= 25 && ([ias] >= 15 || [maxdamage] >= 15 || [mindamage] >= 10 || [fhr] >= 7 || [itemgoldbonus] >= 30 || [itemmagicbonus] >= 10 || [maxhp] >= 20 || [itemreqpercent] == -15 || [dexterity] >= 9 || [strength] >= 9 || [energy] >= 9)							//Good prefix / Perfect suffix Magic Jewel
+[type] == jewel && [quality] == magic # [lightresist] >= 30 && ([ias] >= 10 || [maxdamage] >= 10 || [mindamage] >= 5 || [itemgoldbonus] >= 20 || [itemmagicbonus] >= 7 || [maxhp] >= 15 || [dexterity] >= 6 || [strength] >= 6 || [energy] >= 6)												//Perfect prefix / Good suffix Magic Jewel
+[type] == jewel && [quality] == magic # [lightresist] >= 25 && ([ias] >= 10 || [maxdamage] >= 10 || [mindamage] >= 5 || [itemgoldbonus] >= 20 || [itemmagicbonus] >= 7 || [maxhp] >= 15 || [dexterity] >= 6 || [strength] >= 6 || [energy] >= 6)												//Good Magic Jewel
+
+[type] == jewel && [quality] == magic # [coldresist] >= 30 && ([ias] >= 15 || [maxdamage] >= 15 || [mindamage] >= 10 || [fhr] >= 7 || [itemgoldbonus] >= 30 || [itemmagicbonus] >= 10 || [maxhp] >= 20 || [itemreqpercent] == -15 || [dexterity] >= 9 || [strength] >= 9 || [energy] >= 9)							//Perfect Magic Jewel
+[type] == jewel && [quality] == magic # [coldresist] >= 25 && ([ias] >= 15 || [maxdamage] >= 15 || [mindamage] >= 10 || [fhr] >= 7 || [itemgoldbonus] >= 30 || [itemmagicbonus] >= 10 || [maxhp] >= 20 || [itemreqpercent] == -15 || [dexterity] >= 9 || [strength] >= 9 || [energy] >= 9)							//Good prefix / Perfect suffix Magic Jewel
+[type] == jewel && [quality] == magic # [coldresist] >= 30 && ([ias] >= 10 || [maxdamage] >= 10 || [mindamage] >= 5 || [itemgoldbonus] >= 20 || [itemmagicbonus] >= 7 || [maxhp] >= 15 || [dexterity] >= 6 || [strength] >= 6 || [energy] >= 6)													//Perfect prefix / Good suffix Magic Jewel
+[type] == jewel && [quality] == magic # [coldresist] >= 25 && ([ias] >= 10 || [maxdamage] >= 10 || [mindamage] >= 5 || [itemgoldbonus] >= 20 || [itemmagicbonus] >= 7 || [maxhp] >= 15 || [dexterity] >= 6 || [strength] >= 6 || [energy] >= 6)													//Good Magic Jewel
+
+[type] == jewel && [quality] == magic # [poisonresist] >= 30 && ([ias] >= 15 || [maxdamage] >= 15 || [mindamage] >= 10 || [fhr] >= 7 || [itemgoldbonus] >= 30 || [itemmagicbonus] >= 10 || [maxhp] >= 20 || [itemreqpercent] == -15 || [dexterity] >= 9 || [strength] >= 9 || [energy] >= 9)							//Perfect Magic Jewel
+[type] == jewel && [quality] == magic # [poisonresist] >= 25 && ([ias] >= 15 || [maxdamage] >= 15 || [mindamage] >= 10 || [fhr] >= 7 || [itemgoldbonus] >= 30 || [itemmagicbonus] >= 10 || [maxhp] >= 20 || [itemreqpercent] == -15 || [dexterity] >= 9 || [strength] >= 9 || [energy] >= 9)							//Good prefix / Perfect suffix Magic Jewel
+[type] == jewel && [quality] == magic # [poisonresist] >= 30 && ([ias] >= 10 || [maxdamage] >= 10 || [mindamage] >= 5 || [itemgoldbonus] >= 20 || [itemmagicbonus] >= 7 || [maxhp] >= 15 || [dexterity] >= 6 || [strength] >= 6 || [energy] >= 6)												//Perfect prefix / Good suffix Magic Jewel
+[type] == jewel && [quality] == magic # [poisonresist] >= 25 && ([ias] >= 10 || [maxdamage] >= 10 || [mindamage] >= 5 || [itemgoldbonus] >= 20 || [itemmagicbonus] >= 7 || [maxhp] >= 15 || [dexterity] >= 6 || [strength] >= 6 || [energy] >= 6)												//Good Magic Jewel
+
+///////////////////////RARE JEWELS//////////////////////////////
+[Type] == jewel && [Quality] == rare # [EnhancedDamage] >= 20 && ([Strength]+[Dexterity] >= 15)
+[Type] == jewel && [Quality] == rare # [EnhancedDamage] >= 20 && [Strength] >= 7 && [Dexterity] >= 7
+[Type] == jewel && [Quality] == rare # [EnhancedDamage] >= 20 && ([Strength] >= 7 || [Dexterity] >= 7) && ([ItemMagicBonus] >= 10 || [ItemGoldBonus] >= 25)
+[Type] == jewel && [Quality] == rare # [EnhancedDamage] >= 20 && [FHR] >= 7 && ([Strength] >= 7 || [Dexterity] >= 7 || [FireMaxdam] >= 40 || [Defense] >= 30 || [ItemMagicBonus] >= 10 || [ItemGoldBonus] >= 25)
+[Type] == jewel && [Quality] == rare # [EnhancedDamage] >= 20 && [FHR] >= 7 && ([MinDamage] >= 6 || [MaxDamage] >= 6) && ([Strength] >= 7 || [Dexterity] >= 7)
+[Type] == jewel && [Quality] == rare # [EnhancedDamage] >= 20 && [FHR] >= 7 && ([MinDamage] >= 8 || [MaxDamage] >= 8) && ([Strength] >= 7 || [Dexterity] >= 7)
+[Type] == jewel && [Quality] == rare # [EnhancedDamage] >= 20 && [Tohit] >= 60 && ([FireMaxdam] >= 40 || [LightMaxdam] >= 80 || [FHR] >= 7 || [Defense] >= 30 || [ItemMagicBonus] >= 10 || [ItemGoldBonus] >= 25)
+[Type] == jewel && [Quality] == rare # [EnhancedDamage] >= 20 && [LightMaxdam] >= 80 && ([Defense] >= 30 || [FireMaxdam] >= 40 || [FHR] >= 7 || [ItemMagicBonus] >= 10 || [ItemGoldBonus] >= 25 || [Strength] >= 7 || [Dexterity] >= 7)
+[Type] == jewel && [Quality] == rare # [EnhancedDamage] >= 20 && [FireMaxdam] >= 40 && ([Strength] >= 7 || [Dexterity] >= 7 || [ItemMagicBonus] >= 10 || [ItemGoldBonus] >= 25)
+[Type] == jewel && [Quality] == rare # [EnhancedDamage] >= 20 && [Defense] >= 30 && ([Strength] >= 7 || [Dexterity] >= 7 || [ItemMagicBonus] >= 10 || [ItemGoldBonus] >= 25)
+[Type] == jewel && [Quality] == rare # [EnhancedDamage] >= 20 && (([MinDamage] >= 10 && [MaxDamage] >= 6) || ([MinDamage] >= 8 && [MaxDamage] >= 15))
+[Type] == jewel && [Quality] == rare # [EnhancedDamage] >= 20 && [MinDamage] >= 8 && [MaxDamage] >= 6 && ([Strength] >= 7 || [Dexterity] >= 7 || [FHR] >= 7 || [Tohit] >= 60 || [FireMaxdam] >= 40)
+[Type] == jewel && [Quality] == rare # [EnhancedDamage] >= 20 && [MinDamage] >= 8 && [MaxDamage] >= 6 && ([LightMaxdam] >= 80 || [Defense] >= 30 || [ItemReqPercent] == -15 || [ItemMagicBonus] >= 10 || [ItemGoldBonus] >= 25)
+[Type] == jewel && [Quality] == rare # [EnhancedDamage] >= 20 && ([MinDamage] >= 10 || [MaxDamage] >= 15) && ([Strength] >= 7 || [Dexterity] >= 7 || [FHR] >= 7 || [Tohit] >= 60 || [FireMaxdam] >= 40)
+[Type] == jewel && [Quality] == rare # [EnhancedDamage] >= 20 && ([MinDamage] >= 10 || [MaxDamage] >= 15) && ([LightMaxdam] >= 80 || [Defense] >= 30 || [ItemMagicBonus] >= 10 || [ItemGoldBonus] >= 25)
+[Type] == jewel && [Quality] == rare # [EnhancedDamage] >= 20 && [MinDamage]+[MaxDamage] >= 25
+[Type] == jewel && [Quality] == rare # [EnhancedDamage] >= 20 && [MinDamage]+[MaxDamage] >= 20
+[Type] == jewel && [Quality] == rare # [EnhancedDamage] >= 20 && [MinDamage]+[MaxDamage] >= 15 && ([Strength] >= 7 || [Dexterity] >= 7)
+[Type] == jewel && [Quality] == rare # [EnhancedDamage] >= 20 && [MinDamage]+[MaxDamage] >= 10 && ([Strength] >= 7 || [Dexterity] >= 7)
+[Type] == jewel && [Quality] == rare # [EnhancedDamage] >= 20 && ([MinDamage] >= 8 || [MaxDamage] >= 8) && [Strength]+[Dexterity] >= 16
+[Type] == jewel && [Quality] == rare # [EnhancedDamage] >= 20 && ([MinDamage] >= 6 || [MaxDamage] >= 6) && [Strength]+[Dexterity] >= 13
+[Type] == jewel && [Quality] == rare # [EnhancedDamage] >= 20 && [MinDamage]+[MaxDamage] >= 5 && ([Strength] >= 5 || [Dexterity] >= 7)
+[Type] == jewel && [Quality] == rare # [EnhancedDamage] >= 20 && [ItemReqPercent] == -15 && ([Strength] >= 7 || [Dexterity] >= 7 || [Defense] >= 30 || [FireMaxdam] >= 40 || [LightMaxdam] >= 80 || [Tohit] >= 60)
+[Type] == jewel && [Quality] == rare # [EnhancedDamage] >= 20 && [ItemReqPercent] == -15 && ([MinDamage] >= 18 || [MaxDamage] >= 18 || ([MinDamage] >= 8 && [MaxDamage] >= 6) || [FHR] >= 7 || [ItemMagicBonus] >= 10 || [ItemGoldBonus] >= 25)
+[Type] == jewel && [Quality] == rare # [EnhancedDamage] >= 20 && [ItemDamagetoMana] >= 12 && ([Strength] >= 7 || [Dexterity] >= 7 || [Defense] >= 30 || [FireMaxdam] >= 40 || [LightMaxdam] >= 80 || [Tohit] >= 60)
+[Type] == jewel && [Quality] == rare # [EnhancedDamage] >= 20 && [ItemDamagetoMana] >= 12 && ([MinDamage] >= 18 || [MaxDamage] >= 18 || ([MinDamage] >= 8 && [MaxDamage] >= 6) || [FHR] >= 7 || [ItemMagicBonus] >= 10 || [ItemGoldBonus] >= 25)
+[Type] == jewel && [Quality] == rare # [EnhancedDamage] >= 20 && ([FireResist] >= 20 || [LightResist] >= 20 || [ColdResist] >= 20 || [PoisonResist] >= 20) && ([Strength] >= 7 || [Dexterity] >= 7 || [Defense] >= 30 || [FireMaxdam] >= 40 || [LightMaxdam] >= 80 || [Tohit] >= 60)
+[Type] == jewel && [Quality] == rare # [EnhancedDamage] >= 20 && ([FireResist] >= 20 || [LightResist] >= 20 || [ColdResist] >= 20 || [PoisonResist] >= 20) && ([MinDamage] >= 12 || [MaxDamage] >= 12 || ([MinDamage] >= 8 && [MaxDamage] >= 6) || [FHR] >= 7 || [ItemMagicBonus] >= 10 || [ItemGoldBonus] >= 25)
+[Type] == jewel && [Quality] == rare # [EnhancedDamage] >= 20 && ([FireResist]+[LightResist]+[ColdResist]+[PoisonResist] >= 40) && ([Strength] >= 7 || [Dexterity] >= 7 || [Defense] >= 30 || [FireMaxdam] >= 40 || [LightMaxdam] >= 80 || [Tohit] >= 60)
+[Type] == jewel && [Quality] == rare # [EnhancedDamage] >= 20 && ([FireResist]+[LightResist]+[ColdResist]+[PoisonResist] >= 40) && ([MinDamage] >= 12 || [MaxDamage] >= 12 || ([MinDamage] >= 8 && [MaxDamage] >= 6) || [FHR] >= 7 || [ItemMagicBonus] >= 10 || [ItemGoldBonus] >= 25)
+
+[Type] == jewel && [Quality] == rare # [FireResist]+[LightResist]+[ColdResist]+[PoisonResist] >= 60
+[Type] == jewel && [Quality] == rare # [FireResist]+[LightResist]+[ColdResist]+[PoisonResist] >= 40 && [Strength] >= 7 && [Dexterity] >= 7
+[Type] == jewel && [Quality] == rare # [FireResist]+[LightResist]+[ColdResist]+[PoisonResist] >= 40 && ([Strength] >= 7 || [Dexterity] >= 7) && ([FHR] >= 7 || [ItemReqPercent] == -15 || [ItemDamagetoMana] >= 12)
+[Type] == jewel && [Quality] == rare # [FireResist]+[LightResist]+[ColdResist]+[PoisonResist] >= 40 && ([Strength] >= 7 || [Dexterity] >= 7) && ([ItemGoldBonus] >= 25 || [ItemMagicBonus] >= 10 || [ItemDamagetoMana] >= 12)
+[Type] == jewel && [Quality] == rare # [FireResist]+[LightResist]+[ColdResist]+[PoisonResist] >= 40 && [ItemDamagetoMana] >= 12 && ([FHR] >= 7 || [ItemReqPercent] >= -15)
+[Type] == jewel && [Quality] == rare # [FireResist]+[LightResist]+[ColdResist]+[PoisonResist] >= 40 && ([ItemGoldBonus] >= 25 || [ItemMagicBonus] >= 10) && ([ItemReqPercent] == -15 || [FHR] >= 7)
+[Type] == jewel && [Quality] == rare # ([FireResist] >= 20 || [LightResist] >= 20 || [ColdResist] >= 20 || [PoisonResist] >= 20) && ([ItemGoldBonus] >= 25 || [ItemMagicBonus] >= 10 || [ItemDamagetoMana] >= 12 || [FHR] >= 7 || [ItemReqPercent] >= -15) && ([Strength] >= 7 || [Dexterity] >= 7)
+[Type] == jewel && [Quality] == rare # ([FireResist]+[LightResist]+[ColdResist]+[PoisonResist] >= 28 || [ItemDamageToMana] >= 10) && [FHR] >= 7 && [ItemReqPercent] <= -15
+[Type] == jewel && [Quality] == rare # ([FireResist]+[LightResist]+[ColdResist]+[PoisonResist] >= 36 || [ItemDamageToMana] >= 12) && [FHR] >= 7 && [ItemReqPercent] <= -15
+
+[Type] == jewel && [Quality] == rare # [Strength] >= 7 && [Dexterity] >= 7 && ([FireResist] >= 20 || [LightResist] >= 20 || [ColdResist] >= 20 || [PoisonResist] >= 20)
+[Type] == jewel && [Quality] == rare # [Strength] >= 7 && [Dexterity] >= 7 && ([ItemReqPercent] == -15 || [ItemDamagetoMana] >= 12 || [ItemMagicBonus] >= 17 || [FireMaxdam] >= 40 || [LightMaxdam] >= 80)
+[Type] == jewel && [Quality] == rare # [Strength] >= 7 && [Dexterity] >= 7 && ([MinDamage] >= 10 || [MaxDamage] >= 15 || [Defense] >= 30 || [Tohit] >= 60 || [FHR] >= 7)
+
+[Type] == jewel && [Quality] == rare # [ItemGoldBonus] >= 25 && ([ItemMagicBonus] >= 17 || [Strength] >= 7 || [Dexterity] >= 7 || [FireResist]+[LightResist]+[ColdResist]+[PoisonResist] >= 40 || [MinDamage] >= 8)
+[Type] == jewel && [Quality] == rare # [ItemGoldBonus] >= 25 && ([FireResist] >= 20 || [LightResist] >= 20 || [ColdResist] >= 20 || [PoisonResist] >= 20 || [ItemDamagetoMana] >= 12 || [EnhancedDamage] >= 30)
+
+[Type] == jewel && [Quality] == rare # [FHR] >= 7 && ([Strength] >= 7 || [Dexterity] >= 7 || [EnhancedDamage] >= 20 || [FireResist]+[LightResist]+[ColdResist]+[PoisonResist] >= 27)
+
+[Type] == jewel && [Quality] == rare # ([ItemReqPercent] == -15 || [FHR] >= 7 || [Strength] >= 7 || [Dexterity] >= 7) && ([FireResist] >= 20 || [LightResist] >= 20 || [ColdResist] >= 20 || [PoisonResist] >= 20)
+
+[Type] == jewel && [Quality] == rare # [MinDamage] >= 10 && [MaxDamage] >= 15
+[Type] == jewel && [Quality] == rare # ([MinDamage] >= 8 || [MaxDamage] >= 6 || [ToHit] >= 60 || [EnhancedDamage] >= 20 || [FireResist]+[LightResist]+[ColdResist]+[PoisonResist] >= 40 || [FireResist] >= 20 ||[LightResist] >= 20 || [ColdResist] >= 20 || [PoisonResist] >= 20) && ([FHR] >= 7 || [ItemReqPercent] == -15 || [MaxHp] >= 8 || [Dexterity] >= 7 || [Strength] >= 7)
+
+[type] == jewel && [quality] == rare # [dexterity] >= 9 && [maxhp] >= 8 && [itemlevelreq] <= 30
+[Type] == jewel && [Quality] == rare # [Strength] >= 6 && [Dexterity] >= 6 && [ItemLevelReq] <= 30
+[type] == jewel && [quality] == rare # ([mindamage] >= 4 || [enhanceddamage] >= 20) && [maxdamage] >= 18 && [itemlevelreq] <= 30
+[type] == jewel && [quality] <= rare # ([enhanceddamage] >= 20 || [maxdamage] >= 18 || [mindamage] >= 8) && ([plusdefense] >= 30 || [strength]+[dexterity] >= 12 || [dexterity] >= 9 || [strength] >= 6 || [tohit] >= 50 || [itemreqpercent] < 0) && [itemlevelreq] <= 30
+[type] == jewel && [quality] == rare # [strength] >= 6 && [dexterity] >= 9 && [itemlevelreq] <= 30
+[type] == jewel && [quality] <= rare # ([maxdamage] >= 15 || [maxmana] >= 15) && [itemreqpercent] < 0 && [itemlevelreq] <= 30
+
+[type] == jewel && [quality] <= rare # [enhanceddamage] == 20 && ([maxdamage] == 15 || [dexterity] == 6) && [itemlevelreq] <= 18
+
+[type] == jewel && [quality] <= rare # ([maxdamage] >= 14 || [mindamage] >= 8 || [mindamage] >= 4 && [maxdamage] >= 9) && [itemlevelreq] <= 9
+[type] == jewel && [quality] <= rare # ([tohit] >= 40 || [enhanceddamage] >= 20 || [defense] >= 8) && ([maxdamage] >= 9 || [mindamage] >= 4) && [itemlevelreq] <= 9
+[type] == jewel && [quality] <= rare # ([itemdamagetomana] == 12 || [maxmana] == 10) && ([dexterity] >= 3 || [maxhp] >= 8 || [itemreqpercent] < 0) && [itemlevelreq] <= 9
