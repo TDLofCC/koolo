@@ -121,7 +121,7 @@ func (s BlizzardSorceress) KillAndariel() action.Action {
 			action.NewStepChain(func(d game.Data) []step.Step {
 				m, _ := d.Monsters.FindOne(npc.Andariel, data.MonsterTypeNone)
 				return []step.Step{
-					step.SecondaryAttack(skill.StaticField, m.UnitID, 4, step.Distance(3, 8)),
+					step.SecondaryAttack(skill.StaticField, m.UnitID, 4, step.Distance(1, 5)),
 				}
 			}),
 			s.killMonsterByName(npc.Andariel, data.MonsterTypeNone, sorceressMaxDistance, false, nil),
@@ -144,7 +144,7 @@ func (s BlizzardSorceress) KillDuriel() action.Action {
 			action.NewStepChain(func(d game.Data) []step.Step {
 				m, _ := d.Monsters.FindOne(npc.Duriel, data.MonsterTypeNone)
 				return []step.Step{
-					step.SecondaryAttack(skill.StaticField, m.UnitID, 4, step.Distance(3, 8)),
+					step.SecondaryAttack(skill.StaticField, m.UnitID, 4, step.Distance(1, 5)),
 				}
 			}),
 			s.killMonsterByName(npc.Duriel, data.MonsterTypeNone, sorceressMaxDistance, false, nil),
@@ -168,7 +168,7 @@ func (s BlizzardSorceress) KillMephisto() action.Action {
 			action.NewStepChain(func(d game.Data) []step.Step {
 				m, _ := d.Monsters.FindOne(npc.Mephisto, data.MonsterTypeNone)
 				return []step.Step{
-					step.SecondaryAttack(skill.StaticField, m.UnitID, 4, step.Distance(3, 8)),
+					step.SecondaryAttack(skill.StaticField, m.UnitID, 4, step.Distance(1, 5)),
 				}
 			}),
 			s.killMonsterByName(npc.Mephisto, data.MonsterTypeNone, sorceressMaxDistance, false, nil),
