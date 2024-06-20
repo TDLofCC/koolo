@@ -115,14 +115,13 @@ func (s BlizzardSorceress) KillCountess() action.Action {
 //}
 
 // Add static to Andariel
-
 func (s BlizzardSorceress) KillAndariel() action.Action {
 	return action.NewChain(func(d game.Data) []action.Action {
 		return []action.Action{
 			action.NewStepChain(func(d game.Data) []step.Step {
 				m, _ := d.Monsters.FindOne(npc.Andariel, data.MonsterTypeNone)
 				return []step.Step{
-					step.SecondaryAttack(skill.StaticField, m.UnitID, 7, step.Distance(5, 8)),
+					step.SecondaryAttack(skill.StaticField, m.UnitID, 3, step.Distance(lightningSorceressMaxDistance, 15)),
 				}
 			}),
 			s.killMonsterByName(npc.Andariel, data.MonsterTypeNone, sorceressMaxDistance, false, nil),
@@ -139,14 +138,13 @@ func (s BlizzardSorceress) KillSummoner() action.Action {
 //}
 
 // Add static to Duriel
-
 func (s BlizzardSorceress) KillDuriel() action.Action {
 	return action.NewChain(func(d game.Data) []action.Action {
 		return []action.Action{
 			action.NewStepChain(func(d game.Data) []step.Step {
 				m, _ := d.Monsters.FindOne(npc.Duriel, data.MonsterTypeNone)
 				return []step.Step{
-					step.SecondaryAttack(skill.StaticField, m.UnitID, 7, step.Distance(5, 8)),
+					step.SecondaryAttack(skill.StaticField, m.UnitID, 3, step.Distance(lightningSorceressMaxDistance, 15)),
 				}
 			}),
 			s.killMonsterByName(npc.Duriel, data.MonsterTypeNone, sorceressMaxDistance, false, nil),
@@ -170,14 +168,13 @@ func (s BlizzardSorceress) KillMephisto() action.Action {
 			action.NewStepChain(func(d game.Data) []step.Step {
 				m, _ := d.Monsters.FindOne(npc.Mephisto, data.MonsterTypeNone)
 				return []step.Step{
-					step.SecondaryAttack(skill.StaticField, m.UnitID, 7, step.Distance(5, 8)),
+					step.SecondaryAttack(skill.StaticField, m.UnitID, 3, step.Distance(lightningSorceressMaxDistance, 15)),
 				}
 			}),
 			s.killMonsterByName(npc.Mephisto, data.MonsterTypeNone, sorceressMaxDistance, false, nil),
 		}
 	})
 }
-
 
 func (s BlizzardSorceress) KillNihlathak() action.Action {
 	return s.killMonsterByName(npc.Nihlathak, data.MonsterTypeSuperUnique, sorceressMaxDistance, false, nil)
