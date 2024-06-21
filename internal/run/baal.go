@@ -44,6 +44,8 @@ func (s Baal) BuildActions() (actions []action.Action) {
 		// Kill monsters inside Baal throne
 		s.checkForSoulsOrDolls(),
 		s.builder.ClearAreaAroundPlayer(50, data.MonsterAnyFilter()),
+		s.builder.MoveToCoords(safebaalThronePosition),
+		s.builder.OpenTP(),
 	)
 
 	// Let's move to a safe area and open the portal in companion mode
