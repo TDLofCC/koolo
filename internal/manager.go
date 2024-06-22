@@ -199,8 +199,9 @@ func (mng *SupervisorManager) buildSupervisor(supervisorName string, logger *slo
 func (mng *SupervisorManager) rearrangeWindows() {
 	width := win.GetSystemMetrics(0)
 	height := win.GetSystemMetrics(1)
-	var windowBorderX int32 = 2  // left + right window border is 2px
-	var windowBorderY int32 = 40 // upper window border is usually 40px
+	var windowBorderX int32 = 2   // left + right window border is 2px
+	var windowBorderY int32 = 40  // upper window border is usually 40px
+	var windowOffsetX int32 = -10 // offset horizontal window placement by -10 pixel
 	maxColumns := width / (1280 + windowBorderX)
 	maxRows := height / (720 + windowBorderY)
 
@@ -221,13 +222,13 @@ func (mng *SupervisorManager) rearrangeWindows() {
 		}
 
 		if row <= maxRows {
-			sp.SetWindowPosition(int(column*(1280+windowBorderX)), int(row*(720+windowBorderY)))
+			sp.SetWindowPosition(int(column*(1280+windowBorderX)+windowOffsetX), int(row*(720+windowBorderY)))
 			mng.logger.Debug(
 				"Window Positions",
 				slog.String("supervisor", sp.Name()),
 				slog.String("column", strconv.FormatInt(int64(column), 10)),
 				slog.String("row", strconv.FormatInt(int64(row), 10)),
-				slog.String("position", strconv.FormatInt(int64(column*(1280+windowBorderX)), 10)+"x"+strconv.FormatInt(int64(row*(720+windowBorderY)), 10)),
+				slog.String("position", strconv.FormatInt(int64(column*(1280+windowBorderX)+windowOffsetX), 10)+"x"+strconv.FormatInt(int64(row*(720+windowBorderY)), 10)),
 			)
 			column++
 		} else {
