@@ -113,7 +113,7 @@ func (s Foh) switchAndAttack(d game.Data, id data.UnitID, sk skill.ID) []step.St
 				true,
 				step.Distance(fohMinDistance, fohMaxDistance),
 				step.EnsureAura(skill.Conviction),
-			)
+			),
 		}
 	}
 	return []step.Step{step.SyncStep(func(_ game.Data) error { return nil })} // NoOp replacement
@@ -165,7 +165,7 @@ func (s Foh) attackWithSwitch(d game.Data, id data.UnitID) []step.Step {
 				true,
 				step.Distance(fohMinDistance, fohMaxDistance),
 				step.EnsureAura(skill.Conviction),
-			)
+			),
 			step.SyncStep(func(_ game.Data) error {
 				s.container.HID.PressKeyBinding(hbKey)
 				helper.Sleep(40)
