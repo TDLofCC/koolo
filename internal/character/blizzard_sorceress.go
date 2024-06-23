@@ -78,7 +78,7 @@ func (s BlizzardSorceress) KillMonsterSequence(
 		previousUnitID = int(id)
 
 		if d.PlayerUnit.States.HasState(state.Cooldown) {
-			return []step.Step{step.PrimaryAttack(id, 2, opts...)}
+			return []step.Step{step.PrimaryAttack(id, 2, true, opts...)}
 		}
 
 		return []step.Step{step.SecondaryAttack(skill.Blizzard, id, 1, opts...)}
