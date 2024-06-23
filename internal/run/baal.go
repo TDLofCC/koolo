@@ -19,6 +19,12 @@ var baalThronePosition = data.Position{
 	Y: 5042,
 }
 
+// Safe spot behind to dodge hydras
+var safebaalThronePosition = data.Position{
+	X: 15116,
+	Y: 5052,
+}
+
 type Baal struct {
 	baseRun
 }
@@ -38,6 +44,8 @@ func (s Baal) BuildActions() (actions []action.Action) {
 		// Kill monsters inside Baal throne
 		s.checkForSoulsOrDolls(),
 		s.builder.ClearAreaAroundPlayer(50, data.MonsterAnyFilter()),
+		s.builder.MoveToCoords(safebaalThronePosition),
+		s.builder.OpenTP(),
 	)
 
 	// Let's move to a safe area and open the portal in companion mode
@@ -75,9 +83,12 @@ func (s Baal) BuildActions() (actions []action.Action) {
 				}
 			}
 
-			return []action.Action{s.builder.ClearAreaAroundPlayer(50, data.MonsterAnyFilter())}
+			return []action.Action{
+					s.builder.ClearAreaAroundPlayer(50, data.MonsterAnyFilter()),
+					s.builder.MoveToCoords(safebaalThronePosition),
+					s.builder.Wait(time.Second*5),
+			}	
 		}
-
 		return nil
 	}, action.RepeatUntilNoSteps()))
 
