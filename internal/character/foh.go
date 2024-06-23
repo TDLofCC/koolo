@@ -177,7 +177,7 @@ func (s Foh) attackWithSwitch(d game.Data, id data.UnitID) []step.Step {
 				true,
 				step.Distance(fohMinDistance, fohMaxDistance),
 				step.EnsureAura(skill.Conviction),
-			)
+			),
 			step.SyncStep(func(_ game.Data) error {
 				helper.Sleep(40)
 				s.container.HID.PressKeyBinding(fohKey)
