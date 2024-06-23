@@ -72,6 +72,7 @@ func (du WindDruid) KillMonsterSequence(
 			step.PrimaryAttack(
 				id,
 				3,
+				true,
 				step.Distance(druMinDistance, druMaxDistance),
 			),
 		)
@@ -225,6 +226,7 @@ func (du WindDruid) KillCouncil() action.Action {
 					step.PrimaryAttack(
 						m.UnitID,
 						3,
+						true,
 						step.Distance(druMinDistance, druMaxDistance),
 						step.EnsureAura(skill.Conviction),
 					),
@@ -253,6 +255,7 @@ func (du WindDruid) killMonster(npcId npc.ID, t data.MonsterType) action.Action 
 				step.PrimaryAttack(
 					m.UnitID,
 					3,
+					true,
 					step.Distance(druMinDistance, druMaxDistance),
 				),
 			)
