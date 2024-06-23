@@ -77,9 +77,14 @@ func (a Diablo) Name() string {
 
 func (a Diablo) BuildActions() (actions []action.Action) {
 	actions = append(actions,
-		// Moving to starting point (RiverOfFlame)
+		// Moving to starting point (RiverOfFlame) and TP to Chaos entrance 
 		a.builder.WayPoint(area.RiverOfFlame),
 		a.builder.MoveToCoords(chaosSanctuaryEntrancePosition),
+		// Clear entrance, place TP and buff for manual Chaos runs
+		a.builder.ClearAreaAroundPlayer(25, data.MonsterAnyFilter()),
+		a.builder.OpenTP(),
+		a.builder.Wait(time.Second*3),
+		a.builder.Buff(),
 	)
 
 	// Let's move to a safe area and open the portal in companion mode
@@ -348,19 +353,19 @@ func (a Diablo) generateClearActions(positions []data.Position, filter data.Mons
 				// Let it fail then
 				return []action.Action{a.builder.MoveToCoordsWithMinDistance(pos, 30)}
 			}),
-			// Skip storm casters for now completely while clearing non-seals
-			a.builder.ClearAreaAroundPlayer(35, func(m data.Monsters) []data.Monster {
-				var monsters []data.Monster
+ 			a.builder.ClearAreaAroundPlayer(35, data.MonsterAnyFilter()),
+			// Skip storm casters completely while clearing non-seals, should be enabled if not using FoH paladin
+			//a.builder.ClearAreaAroundPlayer(35, func(m data.Monsters) []data.Monster {
+			//	var monsters []data.Monster
 
-				monsters = filter(m)
-				monsters = skipStormCasterFilter(monsters)
+			//	monsters = filter(m)
+			//	monsters = skipStormCasterFilter(monsters)
 
-				return monsters
-			}),
+			//	return monsters
+			//}),
 			a.builder.ItemPickup(false, 35),
 		)
 	}
-
 	return actions
 }
 
